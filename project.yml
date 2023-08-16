@@ -1,9 +1,9 @@
-name: "Events Collection"
+name: "User stats 4geeks"
 pipelines:
-  - slug: "merge_dataframes"
+  - slug: "process_students_data_pipeline"
     sources:
       - cohort_user_with_projects_and_mentorships
       - cohorts-with-json-and-history-log
-    destination: bigquery-event-and-checkins
+    destination: bigquery_users_stats
     transformations:
-      - merge_dataframes
+      - process_students_data
